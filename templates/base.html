@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <a href={{ url_for('main_page') }}>Main Blog Page</a>
+        <a href={{ url_for('new_post') }}>Add New Blog Post</a> 
+    </header>
+    <head>
+        <title>{{title}}</title>
+    </head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
