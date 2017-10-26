@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>Build a Blog</h1>
+<h1>All Blogs</h1>
 <form action='/blog' method='POST'>
     <table>
     {% if blogs|length == 0 %}
@@ -11,7 +11,8 @@
 
         <ul>
             {% for blog in blogs %}
-            <li><h2><a href='/single_blog?id={{blog.id}}',>{{blog.title}}</a></h2>{{blog.body}}</li>
+            <li><h2><a href='/single_blog?id={{blog.id}}'>{{blog.title}}</a></h2>{{blog.body}}</li>
+            <l1><h4>written by <a href='/individual?id={{blog.owner.id}}'>{{blog.owner.username}}</a></h4></li>
             {% endfor %}
         </ul>
 

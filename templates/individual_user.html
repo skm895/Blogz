@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1></h1>
+<form action='/individual' method='POST'>
+    <table>
+    <h1>Blog posts!</h1>
+        
+        {% for blog in blogs %}
+        <p><h2><a href='/single_blog?id={{blog.id}}',>{{blog.title}}</a></h2></p>
+        <p><h3>{{blog.body}}</h3></p>
+        <p><h4><a href='/individual?id={{blog.id}}',>{{blog.owner.username}}</a></h4></p>
+        {% endfor %}
+        
+
+    
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Blog Users!</h1>
+<form action='/' method='POST'>
+    <table>
+    {% if authors|length == 0 %}
+    <p>No users yet</p>
+    {% else %}
+
+        <ul>
+            {% for author in authors %}
+            <li><h2><a href='/individual?id={{author.id}}',>{{author.username}}</a></h2>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+    </table>
+
+
+{% endblock %}

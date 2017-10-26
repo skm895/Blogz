@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <a href={{ url_for('main_page') }}>Main Blog Page</a>
-        <a href={{ url_for('new_post') }}>Add New Blog Post</a> 
+        <a href={{ url_for('index') }}>home</a>
+        <a href={{ url_for('main_page') }}>all posts</a>
+        <a href={{ url_for('new_post') }}>new post</a> 
     </header>
     <head>
         <title>{{title}}</title>
     </head>
 <body>
 
+    <div>
+        <a href='/login'>log in</a>
+        <a href='/logout'>log out</a>
+    </div>
+    
     {% block content %}
     {% endblock %}
 

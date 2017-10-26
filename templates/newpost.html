@@ -5,12 +5,12 @@
     <form action='/new-post' method='POST'>
         <label>
             Title for your new blog:
-            <input type="text" name='title' />
+            <input type="text" name='title'  /><span class='error'>{{title_error}}</span>
         </label>
         <br />
         <label>
             Your new blog:
-            <input type="textarea" name='new-blog' />
+            <input type="textarea" name='new-blog' /><span class='error'>{{body_error}}</span>
         </label>
         <input type="submit" value='Add Blog' />
     </form>
